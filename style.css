@@ -20,89 +20,47 @@ body {
     z-index: -2;
 }
 
+/* Pengaturan Foto Maki (Kanan) - Digedein Dikitt */
+.anime-right {
+    position: fixed;
+    right: -30px; 
+    bottom: -40px; /* Diturunin dikit biar paha kepotong ga keliatan */
+    height: 82vh;  /* Ukuran digedein dikit dari sebelumnya */
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+/* Pengaturan Foto Akay (Kiri) - Digedein Dikitt */
+.anime-left {
+    position: fixed;
+    left: -30px;
+    bottom: -40px; /* Diturunin dikit biar paha kepotong ga keliatan */
+    height: 82vh;  /* Ukuran digedein dikit dari sebelumnya */
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 30px 50px;
     box-sizing: border-box;
-}
-
-.brand-container { text-align: left; }
-.project-label { font-size: 12px; letter-spacing: 3px; margin: 0; opacity: 0.6; }
-
-/* Nama Brand di Kiri Atas */
-.main-brand { 
-    font-size: 32px; 
-    font-weight: 900; 
-    margin: 0; 
-    line-height: 1;
-}
-
-/* Slogan di Tengah */
-.hero-section {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.slogan-graffiti {
-    font-size: 58px; /* Paling besar */
-    font-weight: 900;
-    line-height: 0.95;
-    margin: 0;
-}
-
-.sub-slogan {
-    font-size: 36px;
-    opacity: 0.8;
-    display: block;
-    margin-top: 5px;
-}
-
-.choose-script { margin-top: 20px; font-size: 18px; color: #888; letter-spacing: 2px; }
-
-/* Gambar Anime */
-.anime-bg {
-    position: fixed;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 90vh;
-    opacity: 0.25;
-    z-index: -1;
-    pointer-events: none;
-}
-
-.anime-top {
-    position: fixed;
-    right: 30px;
-    bottom: -20px; /* Menutupi bagian bawah yang tercrop */
-    height: 65vh;
     z-index: 10;
-    pointer-events: none;
 }
 
-/* Kotak Script & Cards */
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0;
-    width: 100%;
-}
+.main-brand { font-size: 32px; font-weight: 900; margin: 0; }
 
-.card {
-    background: rgba(15,15,15,0.85);
-    border: 1px solid #333;
-    padding: 30px;
-    border-radius: 15px;
-    width: 280px;
-    text-align: center;
-}
+.hero-section { text-align: center; margin-top: 10px; z-index: 10; }
+.slogan-graffiti { font-size: 58px; font-weight: 900; line-height: 0.95; }
+.sub-slogan { font-size: 36px; opacity: 0.8; display: block; }
 
-.card.active { border: 2px solid #fff; box-shadow: 0 0 30px rgba(255,255,255,0.15); }
-.card.disabled { opacity: 0.3; filter: grayscale(1); }
+.cards-container { display: flex; justify-content: center; gap: 30px; margin: 30px 0; z-index: 10; }
+.card { background: rgba(15,15,15,0.9); border: 1px solid #333; padding: 30px; border-radius: 15px; width: 280px; text-align: center; }
+.card.active { border: 2px solid #fff; }
+.card.disabled { opacity: 0.3; }
 
 .info-box {
     background: rgba(10,10,10,0.95);
@@ -111,36 +69,9 @@ header {
     max-width: 650px;
     width: 90%;
     border: 1px solid #222;
-    text-align: left;
-    margin-bottom: 150px; /* Jarak agar tidak tertutup gambar maki */
+    margin-bottom: 100px;
+    z-index: 10;
 }
 
-.code-container {
-    background: #000;
-    padding: 15px;
-    border-radius: 10px;
-    margin: 20px 0;
-    border: 1px solid #333;
-}
-
-pre { color: #888; font-size: 11px; white-space: pre-wrap; word-break: break-all; margin: 0; }
-
-.copy-btn {
-    width: 100%;
-    padding: 18px;
-    background: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: 900;
-    cursor: pointer;
-}
-
-.discord-btn {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-}
+.copy-btn { width: 100%; padding: 18px; background: white; font-weight: 900; border-radius: 10px; cursor: pointer; }
+.discord-btn { background: transparent; border: 2px solid white; color: white; padding: 10px 25px; border-radius: 8px; cursor: pointer; }
