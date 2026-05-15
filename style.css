@@ -5,8 +5,9 @@ body {
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Semua konten ke tengah */
-    text-align: center;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .grid-background {
@@ -16,87 +17,102 @@ body {
     background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
                       linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
     background-size: 40px 40px;
-    z-index: -1;
+    z-index: -2;
 }
 
-.hero-section {
-    padding-top: 50px;
-    position: relative;
+header {
     width: 100%;
-    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 50px;
+    box-sizing: border-box;
 }
 
-.project-title { font-size: 14px; letter-spacing: 5px; opacity: 0.6; margin-bottom: 5px; }
+.brand-container { text-align: left; }
+.project-label { font-size: 12px; letter-spacing: 3px; margin: 0; opacity: 0.6; }
+
+/* Nama Brand di Kiri Atas */
+.main-brand { 
+    font-size: 32px; 
+    font-weight: 900; 
+    margin: 0; 
+    line-height: 1;
+}
+
+/* Slogan di Tengah */
+.hero-section {
+    margin-top: 10px;
+    text-align: center;
+}
 
 .slogan-graffiti {
-    font-size: 55px;
+    font-size: 58px; /* Paling besar */
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 0.95;
     margin: 0;
-    text-transform: uppercase;
 }
 
-.slogan-graffiti span {
-    font-size: 35px;
+.sub-slogan {
+    font-size: 36px;
     opacity: 0.8;
+    display: block;
+    margin-top: 5px;
 }
 
-.choose-script { margin-top: 20px; font-size: 18px; color: #888; }
+.choose-script { margin-top: 20px; font-size: 18px; color: #888; letter-spacing: 2px; }
 
-.hero-image {
-    position: absolute;
-    right: -150px;
-    top: 0;
-    width: 350px;
+/* Gambar Anime */
+.anime-bg {
+    position: fixed;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 90vh;
+    opacity: 0.25;
     z-index: -1;
-    opacity: 0.4; /* Biar nggak nutupin teks karena sekarang di tengah */
+    pointer-events: none;
 }
 
+.anime-top {
+    position: fixed;
+    right: 30px;
+    bottom: -20px; /* Menutupi bagian bawah yang tercrop */
+    height: 65vh;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Kotak Script & Cards */
 .cards-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 40px 0;
+    margin: 30px 0;
+    width: 100%;
 }
 
 .card {
-    background: rgba(20,20,20,0.8);
+    background: rgba(15,15,15,0.85);
     border: 1px solid #333;
     padding: 30px;
     border-radius: 15px;
     width: 280px;
-    transition: 0.3s;
+    text-align: center;
 }
 
-.card.active {
-    border: 2px solid #fff;
-    box-shadow: 0 0 30px rgba(255,255,255,0.1);
-}
-
-.card.disabled {
-    opacity: 0.4;
-    border: 1px dashed #555;
-    cursor: not-allowed;
-}
+.card.active { border: 2px solid #fff; box-shadow: 0 0 30px rgba(255,255,255,0.15); }
+.card.disabled { opacity: 0.3; filter: grayscale(1); }
 
 .info-box {
-    background: rgba(15,15,15,0.9);
+    background: rgba(10,10,10,0.95);
     padding: 30px;
     border-radius: 20px;
-    max-width: 600px;
+    max-width: 650px;
     width: 90%;
     border: 1px solid #222;
-    margin-bottom: 50px;
     text-align: left;
-}
-
-.content-coming-soon {
-    border-top: 1px solid #333;
-    margin-top: 20px;
-    padding-top: 20px;
-    font-style: italic;
-    color: #666;
-    text-align: center;
+    margin-bottom: 150px; /* Jarak agar tidak tertutup gambar maki */
 }
 
 .code-container {
@@ -107,24 +123,24 @@ body {
     border: 1px solid #333;
 }
 
-pre { color: #888; font-size: 11px; white-space: pre-wrap; word-break: break-all; }
+pre { color: #888; font-size: 11px; white-space: pre-wrap; word-break: break-all; margin: 0; }
 
 .copy-btn {
     width: 100%;
-    padding: 15px;
+    padding: 18px;
     background: white;
     border: none;
     border-radius: 10px;
-    font-weight: bold;
+    font-weight: 900;
     cursor: pointer;
 }
 
 .discord-btn {
-    margin-top: 20px;
     background: transparent;
     border: 2px solid white;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 25px;
     border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
 }
