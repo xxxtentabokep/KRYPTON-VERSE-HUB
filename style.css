@@ -29,8 +29,15 @@ body {
     pointer-events: none;
 }
 
-.left-anime { left: -20px; }
-.right-anime { right: -20px; }
+/* Cari bagian ini dan ganti angkanya ya sayang */
+.right-anime { 
+    right: 20px; /* Olivia ganti dari -20px jadi 20px biar dia agak masuk ke tengah */
+}
+
+/* Biar adil, si Akay di kiri juga kita geser dikit biar simetris */
+.left-anime { 
+    left: 20px; /* Olivia ganti dari -20px jadi 20px juga */
+}
 
 header {
     width: 100%;
