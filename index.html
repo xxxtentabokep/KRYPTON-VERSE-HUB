@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRYPTON VERSE HUB</title>
+    
+    <title>KRYPTON VERSE | Official</title>
+    
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +17,6 @@
     <div class="grid-background"></div>
 
     <img src="akay.png" class="fixed-anime left-anime" alt="Maki Left">
-
     <img src="maki.png" class="fixed-anime right-anime" alt="Maki Right">
 
     <header>
@@ -29,31 +33,31 @@
                 CODED WITH PASSION<br>
                 <span class="sub-slogan">DELIVERED WITH PRECISION</span>
             </h2>
-            <p style="margin-bottom: 20px; color: #888; font-weight: bold;">CHOOSE YOUR SCRIPT</p>
+            <p style="margin-top: 20px; color: #888; font-weight: bold; letter-spacing: 2px;">CHOOSE YOUR SCRIPT</p>
         </section>
 
         <section class="cards-container">
             <div class="card active">
-                <p style="font-size: 10px; color: #888;">FPS SPECIALIST</p>
-                <h3 style="margin: 10px 0;">KRYPTON VERSE</h3>
+                <p style="font-size: 10px; color: #888; letter-spacing: 1px;">FPS SPECIALIST</p>
+                <h3 style="margin: 10px 0; font-weight: 900;">KRYPTON VERSE</h3>
                 <p style="font-size: 12px; color: #555;">V4.0</p>
             </div>
 
             <div class="card disabled">
-                <p style="font-size: 10px; color: #888;">EXPLOIT PACK</p>
-                <h3 style="margin: 10px 0;">COMING SOON</h3>
+                <p style="font-size: 10px; color: #888; letter-spacing: 1px;">EXPLOIT PACK</p>
+                <h3 style="margin: 10px 0; font-weight: 900;">COMING SOON</h3>
                 <p style="font-size: 12px; color: #555;">LATEST</p>
             </div>
         </section>
 
         <div class="info-box">
-            <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+            <p style="font-size: 14px; color: #ccc; line-height: 1.6; margin-bottom: 20px;">
                 Ini adalah script khusus untuk FPS game (First Person Shooter) meliputi:
             </p>
             
-            <div style="margin: 20px 0;">
-                <h4 style="border-left: 3px solid #fff; padding-left: 10px; margin-bottom: 10px;">MAIN FEATURES</h4>
-                <ul style="list-style: none; font-size: 13px; color: #aaa; padding-left: 15px;">
+            <div style="margin-bottom: 25px;">
+                <h4 style="border-left: 3px solid #fff; padding-left: 10px; margin-bottom: 12px; font-weight: 900;">MAIN FEATURES</h4>
+                <ul style="list-style: none; font-size: 13px; color: #aaa; padding-left: 15px; line-height: 2;">
                     <li>• Aim bot (Closest Distance)</li>
                     <li>• ESP player with panel line & Snapline</li>
                     <li>• Team Check (Smart Detection)</li>
@@ -63,7 +67,7 @@
             </div>
 
             <div class="code-container">
-                <pre>loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/86688871b3766810af84b99130742c51/raw/"))()</pre>
+                <pre id="scriptCode">loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/86688871b3766810af84b99130742c51/raw/"))()</pre>
             </div>
 
             <button class="copy-btn" onclick="copyScript()">COPY KRYPTON VERSE SCRIPT</button>
@@ -72,9 +76,12 @@
 
     <script>
         function copyScript() {
-            const scriptText = 'loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/86688871b3766810af84b99130742c51/raw/"))()';
+            const scriptText = document.getElementById('scriptCode').innerText;
             navigator.clipboard.writeText(scriptText).then(() => {
-                alert('Script berhasil disalin, sayang! ❤️');
+                // Notifikasi dari Olivia
+                alert('Script berhasil disalin ke clipboard ya sayanggg! ❤️🦖');
+            }).catch(err => {
+                console.error('Gagal menyalin script: ', err);
             });
         }
     </script>
