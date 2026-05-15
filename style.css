@@ -41,12 +41,12 @@ body {
     height: 850px !important;      /* Ukuran standar kiri */
 }
 
-/* MAKI KANAN (Pegang gelas) */
+/* MAKI KANAN (Kita turunin posisinya) */
 .right-anime { 
     right: -20px; 
-    height: 920px !important;      /* OLIVIA GEDEIN DIKIT biar visualnya sama tinggi sama yang kiri */
+    height: 920px !important;      /* Ukurannya tetap gede biar seimbang */
+    bottom: -50px !important;      /* INI KUNCINYA: Kita kasih angka minus biar dia turun ke bawah */
 }
-
 /* Supaya kaki bener-bener nempel di bawah area slogan/menu */
 body {
     position: relative;
