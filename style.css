@@ -1,5 +1,7 @@
+/* RESET DASAR */
 body {
     margin: 0;
+    padding: 0;
     background-color: #050505;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -10,6 +12,7 @@ body {
     min-height: 100vh;
 }
 
+/* BACKGROUND KOTAK-KOTAK */
 .grid-background {
     position: fixed;
     top: 0; left: 0;
@@ -20,51 +23,103 @@ body {
     z-index: -2;
 }
 
-/* KODE SAKTI ANTI-ANTRE */
+/* FOTO MAKI & AKAY MELAYANG (FULL BODY) */
 .fixed-anime {
-    position: fixed !important; /* Memaksa melayang */
-    bottom: -80px; /* Sembunyiin paha terpotong */
-    height: 85vh; /* Digedein dikit */
-    z-index: -1; /* Di belakang teks */
-    pointer-events: none;
+    position: fixed !important;
+    bottom: 0;           /* Kaki nempel ke bawah layar */
+    height: 90vh;        /* Ukuran tinggi foto */
+    z-index: -1;         /* Di belakang tulisan biar gak ganggu */
+    pointer-events: none; /* Biar tombol tetap bisa diklik */
 }
 
-/* Cari bagian ini dan ganti angkanya ya sayang */
-.right-anime { 
-    right: 20px; /* Olivia ganti dari -20px jadi 20px biar dia agak masuk ke tengah */
-}
-
-/* Biar adil, si Akay di kiri juga kita geser dikit biar simetris */
 .left-anime { 
-    left: 20px; /* Olivia ganti dari -20px jadi 20px juga */
+    left: 10px;          /* Jarak dari kiri */
 }
 
+.right-anime { 
+    right: 10px;         /* Jarak dari kanan */
+}
+
+/* BAGIAN ATAS (HEADER) */
 header {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 30px 50px;
     box-sizing: border-box;
+    z-index: 10;
 }
 
-.main-brand { font-size: 32px; font-weight: 900; margin: 0; }
+.main-brand { font-size: 32px; font-weight: 900; margin: 0; letter-spacing: 2px; }
+.project-label { font-size: 12px; color: #888; margin: 0; }
+
+/* ISI TENGAH (MAIN CONTENT) */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+}
+
 .hero-section { text-align: center; margin-top: 20px; }
-.slogan-graffiti { font-size: 58px; font-weight: 900; line-height: 0.95; }
-.sub-slogan { font-size: 36px; opacity: 0.8; display: block; }
-.cards-container { display: flex; justify-content: center; gap: 30px; margin: 40px 0; }
-.card { background: rgba(15,15,15,0.9); border: 1px solid #333; padding: 30px; border-radius: 15px; width: 280px; text-align: center; }
-.card.active { border: 2px solid #fff; }
+.slogan-graffiti { font-size: 50px; font-weight: 900; line-height: 1; margin-bottom: 40px; }
+.sub-slogan { font-size: 30px; opacity: 0.7; display: block; }
+
+/* KOTAK MENU */
+.cards-container { display: flex; gap: 20px; margin-bottom: 40px; }
+.card { 
+    background: rgba(15,15,15,0.9); 
+    border: 1px solid #333; 
+    padding: 20px 40px; 
+    border-radius: 12px; 
+    text-align: center; 
+}
+.card.active { border: 2px solid #fff; box-shadow: 0 0 15px rgba(255,255,255,0.1); }
 .card.disabled { opacity: 0.3; }
 
+/* KOTAK SCRIPT */
 .info-box {
     background: rgba(10,10,10,0.95);
     padding: 30px;
     border-radius: 20px;
-    max-width: 650px;
+    max-width: 600px;
     width: 90%;
     border: 1px solid #222;
     margin-bottom: 50px;
 }
 
-.copy-btn { width: 100%; padding: 18px; background: white; font-weight: 900; border-radius: 10px; cursor: pointer; border: none; }
-.discord-btn { background: transparent; border: 2px solid white; color: white; padding: 10px 25px; border-radius: 8px; cursor: pointer; }
+.code-container {
+    background: #000;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #333;
+    overflow-x: auto;
+}
+
+pre { margin: 0; font-size: 12px; color: #ccc; }
+
+/* TOMBOL-TOMBOL */
+.copy-btn { 
+    width: 100%; 
+    padding: 15px; 
+    background: white; 
+    color: black; 
+    font-weight: 900; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    border: none; 
+    transition: 0.3s;
+}
+.copy-btn:hover { background: #ddd; }
+
+.discord-btn { 
+    background: transparent; 
+    border: 2px solid white; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
