@@ -26,24 +26,31 @@ body {
     z-index: -2;
 }
 
-/* 3. FOTO MAKI & AKAY (POSISI DIAM & UKURAN PAS) */
+/* FOTO MAKI & AKAY (MENYATU DENGAN BACKGROUND) */
 .fixed-anime {
-    position: fixed !important; /* INI KUNCINYA BIAR GAK JALAN-JALAN */
-    bottom: 0;
-    height: 95vh;               /* Ukuran pas, nggak kegedean nggak kekecilan */
-    z-index: -1;                /* Di belakang teks */
+    position: absolute !important; /* Ganti ke absolute biar dia nempel di halaman, bukan di layar */
+    top: 0;                        /* Mulai dari atas */
+    height: 800px !important;      /* Kita kunci pakai Pixel biar nggak kegedean raksasa */
+    z-index: -1;
     pointer-events: none;
-    transition: none;           /* Biar nggak ada efek gerak */
+    object-fit: contain;
 }
 
 .left-anime { 
-    left: -50px; 
+    left: 0; 
 }
 
 .right-anime { 
-    right: -50px; 
+    right: 0; 
 }
 
+/* Pastikan body tahu cara menampung foto absolute */
+body {
+    position: relative;
+    margin: 0;
+    background-color: #050505;
+    min-height: 100vh;
+}
 /* 4. KONTEN TENGAH */
 header {
     display: flex;
