@@ -23,22 +23,23 @@ body {
     z-index: -2;
 }
 
-/* KODE BIAR MAKI GEDE RAKSASA & DIEM */
+/* KODE MAKI RAKSASA & TERKUNCI */
 .fixed-anime {
-    position: fixed !important; /* Biar dia DIAM saat di-scroll */
-    bottom: -5%;               /* Sedikit turun biar kakinya pas */
-    height: 150vh !important;   /* JAUH LEBIH GEDE (1.5x tinggi layar) biar sampai ke slogan */
-    z-index: -1;                /* Di belakang teks */
+    position: fixed !important; /* WAJIB fixed biar dia DIAM di layar */
+    bottom: -100px;             /* Biar kakinya pas di bawah */
+    height: 1200px !important;  /* PAKAI PIXEL BIAR GEDE BANGET (Bisa kamu ganti ke 1500px kalau kurang) */
+    width: auto;
+    z-index: -1;
     pointer-events: none;
-    object-fit: contain;        /* Biar foto nggak penyet/gepeng */
+    opacity: 0.9;               /* Sedikit transparan biar nggak terlalu nutupin */
 }
 
 .left-anime { 
-    left: -150px;               /* Geser keluar karena gambarnya raksasa */
+    left: -250px;              /* Geser agak keluar karena fotonya raksasa */
 }
 
 .right-anime { 
-    right: -150px;              /* Geser keluar karena gambarnya raksasa */
+    right: -250px;             /* Geser agak keluar karena fotonya raksasa */
 }
 
 /* Tambahan biar teks tengah nggak ketutupan maki raksasa */
