@@ -20,25 +20,17 @@ body {
     z-index: -2;
 }
 
-/* FOTO AKAY (KIRI) - POSISI TERKUNCI */
-.anime-left {
-    position: fixed !important;
-    left: -20px;
-    bottom: -60px; /* Menutupi bagian terpotong */
-    height: 85vh;
-    z-index: 1; /* Di depan background, tapi di belakang tombol */
+/* KODE SAKTI ANTI-ANTRE */
+.fixed-anime {
+    position: fixed !important; /* Memaksa melayang */
+    bottom: -80px; /* Sembunyiin paha terpotong */
+    height: 85vh; /* Digedein dikit */
+    z-index: -1; /* Di belakang teks */
     pointer-events: none;
 }
 
-/* FOTO MAKI (KANAN) - POSISI TERKUNCI */
-.anime-right {
-    position: fixed !important;
-    right: -20px;
-    bottom: -60px; /* Menutupi bagian terpotong */
-    height: 85vh;
-    z-index: 1;
-    pointer-events: none;
-}
+.left-anime { left: -20px; }
+.right-anime { right: -20px; }
 
 header {
     width: 100%;
@@ -46,40 +38,15 @@ header {
     justify-content: space-between;
     padding: 30px 50px;
     box-sizing: border-box;
-    z-index: 10;
 }
 
 .main-brand { font-size: 32px; font-weight: 900; margin: 0; }
-
-.hero-section { 
-    text-align: center; 
-    margin-top: 20px; 
-    z-index: 10; 
-    position: relative;
-}
-
+.hero-section { text-align: center; margin-top: 20px; }
 .slogan-graffiti { font-size: 58px; font-weight: 900; line-height: 0.95; }
 .sub-slogan { font-size: 36px; opacity: 0.8; display: block; }
-
-.cards-container { 
-    display: flex; 
-    justify-content: center; 
-    gap: 30px; 
-    margin: 40px 0; 
-    z-index: 10; 
-    position: relative;
-}
-
-.card { 
-    background: rgba(15,15,15,0.9); 
-    border: 1px solid #333; 
-    padding: 30px; 
-    border-radius: 15px; 
-    width: 280px; 
-    text-align: center; 
-}
-
-.card.active { border: 2px solid #fff; box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+.cards-container { display: flex; justify-content: center; gap: 30px; margin: 40px 0; }
+.card { background: rgba(15,15,15,0.9); border: 1px solid #333; padding: 30px; border-radius: 15px; width: 280px; text-align: center; }
+.card.active { border: 2px solid #fff; }
 .card.disabled { opacity: 0.3; }
 
 .info-box {
@@ -89,9 +56,7 @@ header {
     max-width: 650px;
     width: 90%;
     border: 1px solid #222;
-    margin-bottom: 100px;
-    z-index: 10;
-    position: relative;
+    margin-bottom: 50px;
 }
 
 .copy-btn { width: 100%; padding: 18px; background: white; font-weight: 900; border-radius: 10px; cursor: pointer; border: none; }
