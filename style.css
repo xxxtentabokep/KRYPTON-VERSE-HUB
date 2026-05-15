@@ -23,21 +23,21 @@ body {
     z-index: -2;
 }
 
-/* FOTO MAKI & AKAY MELAYANG (FULL BODY) */
 .fixed-anime {
     position: fixed !important;
-    bottom: 0;           /* Kaki nempel ke bawah layar */
-    height: 90vh;        /* Ukuran tinggi foto */
-    z-index: -1;         /* Di belakang tulisan biar gak ganggu */
-    pointer-events: none; /* Biar tombol tetap bisa diklik */
+    bottom: 0;           /* Kaki tetap di bawah */
+    height: 110vh;       /* INI KUNCINYA: Kita buat tingginya lebih dari layar (110%) biar gede banget sampai ke slogan */
+    z-index: -1;         /* Tetap di belakang tulisan */
+    pointer-events: none;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)); /* Efek bayangan dikit biar keren */
 }
 
 .left-anime { 
-    left: 10px;          /* Jarak dari kiri */
+    left: -50px;         /* Olivia geser agak keluar dikit biar nggak nutupin teks karena kegedean */
 }
 
 .right-anime { 
-    right: 10px;         /* Jarak dari kanan */
+    right: -50px;        /* Sama, geser dikit ke kanan luar */
 }
 
 /* BAGIAN ATAS (HEADER) */
