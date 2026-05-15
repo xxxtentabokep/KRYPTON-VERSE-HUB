@@ -23,21 +23,28 @@ body {
     z-index: -2;
 }
 
+/* KODE BIAR MAKI GEDE RAKSASA & DIEM */
 .fixed-anime {
-    position: fixed !important;
-    bottom: 0;           /* Kaki tetap di bawah */
-    height: 110vh;       /* INI KUNCINYA: Kita buat tingginya lebih dari layar (110%) biar gede banget sampai ke slogan */
-    z-index: -1;         /* Tetap di belakang tulisan */
+    position: fixed !important; /* Biar dia DIAM saat di-scroll */
+    bottom: -5%;               /* Sedikit turun biar kakinya pas */
+    height: 150vh !important;   /* JAUH LEBIH GEDE (1.5x tinggi layar) biar sampai ke slogan */
+    z-index: -1;                /* Di belakang teks */
     pointer-events: none;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5)); /* Efek bayangan dikit biar keren */
+    object-fit: contain;        /* Biar foto nggak penyet/gepeng */
 }
 
 .left-anime { 
-    left: -50px;         /* Olivia geser agak keluar dikit biar nggak nutupin teks karena kegedean */
+    left: -150px;               /* Geser keluar karena gambarnya raksasa */
 }
 
 .right-anime { 
-    right: -50px;        /* Sama, geser dikit ke kanan luar */
+    right: -150px;              /* Geser keluar karena gambarnya raksasa */
+}
+
+/* Tambahan biar teks tengah nggak ketutupan maki raksasa */
+main {
+    position: relative;
+    z-index: 10;
 }
 
 /* BAGIAN ATAS (HEADER) */
