@@ -20,26 +20,24 @@ body {
     z-index: -2;
 }
 
-/* Pengaturan Foto Maki (Kanan) - Digedein Dikitt */
+/* Foto Maki (Kanan) */
 .anime-right {
-    position: fixed;
-    right: -30px; 
-    bottom: -40px; /* Diturunin dikit biar paha kepotong ga keliatan */
-    height: 82vh;  /* Ukuran digedein dikit dari sebelumnya */
-    z-index: 5;
-    pointer-events: none;
-    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    position: fixed; /* WAJIB fixed biar dia melayang */
+    right: 0;        /* Nempel ke kanan */
+    bottom: -50px;   /* Sembunyiin paha terpotong */
+    height: 85vh;    /* Ukuran yang tuan mau (gede dikit) */
+    z-index: -1;     /* Biar dia di BELAKANG tulisan */
+    pointer-events: none; /* Biar nggak ngeganggu klik tombol */
 }
 
-/* Pengaturan Foto Akay (Kiri) - Digedein Dikitt */
+/* Foto Akay (Kiri) */
 .anime-left {
-    position: fixed;
-    left: -30px;
-    bottom: -40px; /* Diturunin dikit biar paha kepotong ga keliatan */
-    height: 82vh;  /* Ukuran digedein dikit dari sebelumnya */
-    z-index: 5;
-    pointer-events: none;
-    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    position: fixed; /* WAJIB fixed biar dia melayang */
+    left: 0;         /* Nempel ke kiri */
+    bottom: -50px;   /* Sembunyiin paha terpotong */
+    height: 85vh;    /* Ukuran yang tuan mau (gede dikit) */
+    z-index: -1;     /* Biar dia di BELAKANG tulisan */
+    pointer-events: none; /* Biar nggak ngeganggu klik tombol */
 }
 
 header {
