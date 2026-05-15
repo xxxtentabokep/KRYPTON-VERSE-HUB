@@ -3,60 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KRYPTON VERSE | Official</title>
-    <link rel="stylesheet" href="style.css">
+    <title>KRYPTON VERSE HUB</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="grid-background"></div>
+
+    <img src="akay.png" class="fixed-anime left-anime" alt="Maki Left">
+
+    <img src="maki.png" class="fixed-anime right-anime" alt="Maki Right">
 
     <header>
         <div class="brand-container">
-            <p class="project-label">PROJECT ALHAUDH</p>
+            <p class="project-label">PROJECT: K.V</p>
             <h1 class="main-brand">KRYPTON VERSE</h1>
         </div>
-        <button class="discord-btn" onclick="window.location.href='https://discord.gg/ha4yJ49A'">JOIN DISCORD</button>
+        <button class="discord-btn" onclick="window.location.href='https://discord.gg/yourlink'">JOIN DISCORD</button>
     </header>
 
     <main>
-        <div class="hero-section">
-            <h1 class="slogan-graffiti">
+        <section class="hero-section">
+            <h2 class="slogan-graffiti">
                 CODED WITH PASSION<br>
                 <span class="sub-slogan">DELIVERED WITH PRECISION</span>
-            </h1>
-            <p class="choose-script">CHOOSE YOUR SCRIPT</p>
-        </div>
+            </h2>
+            <p style="margin-bottom: 20px; color: #888; font-weight: bold;">CHOOSE YOUR SCRIPT</p>
+        </section>
 
-        <div class="cards-container">
+        <section class="cards-container">
             <div class="card active">
-                <span>FPS SPECIALIST</span>
-                <h2>KRYPTON VERSE</h2>
+                <p style="font-size: 10px; color: #888;">FPS SPECIALIST</p>
+                <h3 style="margin: 10px 0;">KRYPTON VERSE</h3>
+                <p style="font-size: 12px; color: #555;">V4.0</p>
             </div>
+
             <div class="card disabled">
-                <span>EXPLOIT PACK</span>
-                <h2>COMING SOON</h2>
+                <p style="font-size: 10px; color: #888;">EXPLOIT PACK</p>
+                <h3 style="margin: 10px 0;">COMING SOON</h3>
+                <p style="font-size: 12px; color: #555;">LATEST</p>
             </div>
-        </div>
+        </section>
 
         <div class="info-box">
-            <p class="description">Ini adalah script khusus untuk FPS game (First Person Shooter) meliputi:</p>
-            <h3>| MAIN FEATURES</h3>
-            <ul>
-                <li>Aim bot (Closest Distance)</li>
-                <li>ESP player with panel line & Snapline</li>
-                <li>Team Check (Smart Detection)</li>
-                <li>Anti report & Anti ban</li>
-            </ul>
-            <div class="code-container">
-                <pre id="scriptCode">loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/8b68b871b3766010af84b99130742c51/raw/"))()</pre>
+            <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                Ini adalah script khusus untuk FPS game (First Person Shooter) meliputi:
+            </p>
+            
+            <div style="margin: 20px 0;">
+                <h4 style="border-left: 3px solid #fff; padding-left: 10px; margin-bottom: 10px;">MAIN FEATURES</h4>
+                <ul style="list-style: none; font-size: 13px; color: #aaa; padding-left: 15px;">
+                    <li>• Aim bot (Closest Distance)</li>
+                    <li>• ESP player with panel line & Snapline</li>
+                    <li>• Team Check (Smart Detection)</li>
+                    <li>• Anti recoil (In Progress)</li>
+                    <li>• Anti report & Anti ban</li>
+                </ul>
             </div>
+
+            <div class="code-container">
+                <pre>loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/86688871b3766810af84b99130742c51/raw/"))()</pre>
+            </div>
+
             <button class="copy-btn" onclick="copyScript()">COPY KRYPTON VERSE SCRIPT</button>
         </div>
     </main>
 
-    <img src="akay.png" class="fixed-anime left-anime">
-    <img src="maki.png" class="fixed-anime right-anime">
+    <script>
+        function copyScript() {
+            const scriptText = 'loadstring(game:HttpGet("https://gist.githubusercontent.com/xxxtentabokep/86688871b3766810af84b99130742c51/raw/"))()';
+            navigator.clipboard.writeText(scriptText).then(() => {
+                alert('Script berhasil disalin, sayang! ❤️');
+            });
+        }
+    </script>
 
-    <script src="script.js"></script>
 </body>
 </html>
