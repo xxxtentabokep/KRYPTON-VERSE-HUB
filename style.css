@@ -26,29 +26,30 @@ body {
     z-index: -2;
 }
 
-/* FOTO MAKI & AKAY (MENYATU DENGAN BACKGROUND) */
+/* DASAR FOTO */
 .fixed-anime {
-    position: absolute !important; /* Ganti ke absolute biar dia nempel di halaman, bukan di layar */
-    top: 0;                        /* Mulai dari atas */
-    height: 800px !important;      /* Kita kunci pakai Pixel biar nggak kegedean raksasa */
+    position: absolute !important; /* Biar dia nempel di halaman, bukan di layar */
+    bottom: 0;                     /* Kunci di paling bawah halaman */
     z-index: -1;
     pointer-events: none;
     object-fit: contain;
 }
 
+/* MAKI KIRI (Tangan di belakang) */
 .left-anime { 
-    left: 0; 
+    left: -20px; 
+    height: 850px !important;      /* Ukuran standar kiri */
 }
 
+/* MAKI KANAN (Pegang gelas) */
 .right-anime { 
-    right: 0; 
+    right: -20px; 
+    height: 920px !important;      /* OLIVIA GEDEIN DIKIT biar visualnya sama tinggi sama yang kiri */
 }
 
-/* Pastikan body tahu cara menampung foto absolute */
+/* Supaya kaki bener-bener nempel di bawah area slogan/menu */
 body {
     position: relative;
-    margin: 0;
-    background-color: #050505;
     min-height: 100vh;
 }
 /* 4. KONTEN TENGAH */
