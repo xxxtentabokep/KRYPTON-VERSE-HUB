@@ -1,0 +1,133 @@
+:root {
+    --primary-glow: #ffffff;
+    --accent-glow: #ffff00;
+}
+
+body {
+    margin: 0;
+    background-color: #050505;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Efek Kotak-kotak di Background */
+.grid-background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.discord-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.discord-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.hero-section {
+    position: relative;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-image {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 450px;
+    filter: drop-shadow(0 0 30px rgba(255,255,255,0.2));
+    z-index: 1;
+}
+
+.project-title { font-size: 14px; letter-spacing: 2px; margin: 0; }
+
+.slogan-graffiti {
+    font-family: 'Poppins', sans-serif; /* Kamu bisa ganti font graffiti di sini */
+    font-size: 45px;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 4px 4px 0px #333;
+}
+
+.choose-script { font-size: 20px; opacity: 0.8; }
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    padding: 0 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(20,20,20,0.8);
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    cursor: pointer;
+}
+
+.card.active {
+    border: 2px solid white;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.info-box {
+    background: rgba(15,15,15,0.9);
+    margin: 40px 50px;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    border: 1px solid #222;
+}
+
+.code-container {
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border-left: 4px solid var(--accent-glow);
+    overflow-x: auto;
+}
+
+pre { color: #888; font-size: 12px; }
+
+.copy-btn {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.copy-btn:hover {
+    background: #ddd;
+    transform: translateY(-2px);
+}
