@@ -1,107 +1,102 @@
-:root {
-    --primary-glow: #ffffff;
-    --accent-glow: #ffff00;
-}
-
 body {
     margin: 0;
     background-color: #050505;
     color: white;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Semua konten ke tengah */
+    text-align: center;
 }
 
-/* Efek Kotak-kotak di Background */
 .grid-background {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), 
-                      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 30px 30px;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
     z-index: -1;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.discord-btn {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.discord-btn:hover {
-    background: white;
-    color: black;
-    box-shadow: 0 0 15px var(--primary-glow);
-}
-
 .hero-section {
+    padding-top: 50px;
     position: relative;
-    padding: 50px;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    max-width: 900px;
 }
+
+.project-title { font-size: 14px; letter-spacing: 5px; opacity: 0.6; margin-bottom: 5px; }
+
+.slogan-graffiti {
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.slogan-graffiti span {
+    font-size: 35px;
+    opacity: 0.8;
+}
+
+.choose-script { margin-top: 20px; font-size: 18px; color: #888; }
 
 .hero-image {
     position: absolute;
-    right: 0;
-    top: -50px;
-    width: 450px;
-    filter: drop-shadow(0 0 30px rgba(255,255,255,0.2));
-    z-index: 1;
+    right: -150px;
+    top: 0;
+    width: 350px;
+    z-index: -1;
+    opacity: 0.4; /* Biar nggak nutupin teks karena sekarang di tengah */
 }
-
-.project-title { font-size: 14px; letter-spacing: 2px; margin: 0; }
-
-.slogan-graffiti {
-    font-family: 'Poppins', sans-serif; /* Kamu bisa ganti font graffiti di sini */
-    font-size: 45px;
-    margin: 10px 0;
-    color: white;
-    text-shadow: 4px 4px 0px #333;
-}
-
-.choose-script { font-size: 20px; opacity: 0.8; }
 
 .cards-container {
     display: flex;
-    gap: 20px;
-    padding: 0 50px;
-    max-width: 1200px;
-    margin: auto;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
 }
 
 .card {
     background: rgba(20,20,20,0.8);
     border: 1px solid #333;
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    width: 250px;
-    cursor: pointer;
+    width: 280px;
+    transition: 0.3s;
 }
 
 .card.active {
-    border: 2px solid white;
-    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    border: 2px solid #fff;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+.card.disabled {
+    opacity: 0.4;
+    border: 1px dashed #555;
+    cursor: not-allowed;
 }
 
 .info-box {
     background: rgba(15,15,15,0.9);
-    margin: 40px 50px;
     padding: 30px;
     border-radius: 20px;
-    max-width: 800px;
+    max-width: 600px;
+    width: 90%;
     border: 1px solid #222;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.content-coming-soon {
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-style: italic;
+    color: #666;
+    text-align: center;
 }
 
 .code-container {
@@ -109,11 +104,10 @@ header {
     padding: 15px;
     border-radius: 10px;
     margin: 20px 0;
-    border-left: 4px solid var(--accent-glow);
-    overflow-x: auto;
+    border: 1px solid #333;
 }
 
-pre { color: #888; font-size: 12px; }
+pre { color: #888; font-size: 11px; white-space: pre-wrap; word-break: break-all; }
 
 .copy-btn {
     width: 100%;
@@ -122,12 +116,15 @@ pre { color: #888; font-size: 12px; }
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.copy-btn:hover {
-    background: #ddd;
-    transform: translateY(-2px);
+.discord-btn {
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
 }
