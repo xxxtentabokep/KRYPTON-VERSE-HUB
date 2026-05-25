@@ -28,25 +28,25 @@ body {
 
 /* DASAR FOTO */
 .fixed-anime {
-    position: absolute !important; /* Biar dia nempel di halaman, bukan di layar */
-    bottom: 0;                     /* Kunci di paling bawah halaman */
-    z-index: -1;
-    pointer-events: none;
+    position: fixed !important; /* Mengunci gambar tetap diam di layar monitor saat di-scroll */
+    bottom: 0 !important;       /* Menempelkan kaki tepat di dasar bawah layar */
+    z-index: -1;                /* Taruh di paling belakang agar tidak menutupi teks/tombol */
+    pointer-events: none;       /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
     object-fit: contain;
 }
 
-/* MAKI KIRI (Tangan di belakang) */
-.left-anime { 
-    left: -20px; 
-    height: 850px !important;      /* Ukuran standar kiri */
+/* MAKI KIRI */
+.left-anime {
+    left: 0px !important;       /* Geser mepet ke kiri layar */
+    height: 85vh !important;    /* Tingginya otomatis 85% dari total tinggi layar monitor user */
 }
 
-/* MAKI KANAN (Kita turunin posisinya) */
-.right-anime { 
-    right: -20px; 
-    height: 920px !important;      /* Ukurannya tetap gede biar seimbang */
-    bottom: -50px !important;      /* INI KUNCINYA: Kita kasih angka minus biar dia turun ke bawah */
+/* MAKI KANAN */
+.right-anime {
+    right: 0px !important;      /* Geser mepet ke kanan layar */
+    height: 85vh !important;    /* Tingginya disamakan 85% biar seimbang dan presisi */
 }
+
 /* Supaya kaki bener-bener nempel di bawah area slogan/menu */
 body {
     position: relative;
