@@ -40,18 +40,18 @@ body {
     object-fit: contain;
 }
 
-/* MAKI KIRI (UKURAN RAKSASA & TURUN PAS KE BAWAH) */
+/* MAKI KIRI (TURUN JAUH KE BAWAH SECARA PRESISI) */
 .left-anime {
     left: -120px !important;      /* Tetap ditarik keluar biar gak nabrak kotak teks tengah */
-    top: -40px !important;        /* RE-FIXED: Kita kecilin minusnya dari -120px jadi -40px biar dia merosot turun ke bawah secara presisi! */
+    top: 120px !important;        /* RE-FIXED MUTLAK: Kita ganti jadi POSITIF 120px biar posisinya merosot turun jauh ke bawah! */
     height: 1100px !important;    /* SCALE ENGINE: Tetap raksasa 1100px biar super sangar */
     width: auto !important;
 }
 
-/* MAKI KANAN (UKURAN RAKSASA & TURUN PAS KE BAWAH) */
+/* MAKI KANAN (TURUN JAUH KE BAWAH SECARA PRESISI) */
 .right-anime {
     right: -100px !important;     /* Tetap ditarik keluar kanan biar simetris dan rapi */
-    top: -40px !important;        /* RE-FIXED: Disamakan -40px biar tingginya pas dan sejajar di layar laptop lu */
+    top: 120px !important;        /* RE-FIXED MUTLAK: Samakan jadi POSITIF 120px biar tingginya pas dan sejajar seimbang */
     height: 1100px !important;    /* Disamakan 1100px raksasa permanen */
     width: auto !important;
 }
