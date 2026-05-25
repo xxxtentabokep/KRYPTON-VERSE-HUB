@@ -1,6 +1,6 @@
 /* ===================================================
    KRYPTON VERSE OFFICIAL STYLESHEET (Project-KV-VII)
-   FIXED EDITION: JUMBO BUTTON & GIANT SIDE MAKI
+   FINAL ABSOLUTE ENGINE: GIANT STATIC MAKI & JUMBO BTN
    =================================================== */
 
 /* 1. RESET DASAR */
@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; /* Biar nggak ada scroll samping */
     min-height: 100vh;
-    position: relative;
+    position: relative; /* KUNCI STRUKTUR: Biar foto absolute di bawah bisa nempel presisi di halaman */
 }
 
 /* 2. BACKGROUND GRID */
@@ -32,28 +32,27 @@ body {
     z-index: -2;
 }
 
-/* 3. DASAR FOTO MAKI - DIKUNCI MATI FIX DI MONITOR */
+/* 3. DASAR FOTO MAKI - DIKUNCI MATI NEMPEL DI BACKGROUND WEB */
 .fixed-anime {
-    position: fixed !important;   /* Mengunci gambar tetap diam mengapit layar monitor laptop lu */
-    bottom: -10px !important;     /* Kaki sedikit kita turunin biar badannya makin naik tegak ke atas */
+    position: absolute !important; /* BYPASS FIX: Menempel permanen di background halaman web, gak bakal ngikutin layar pas di-scroll */
     z-index: -1;                  /* Taruh di paling belakang agar tidak menutupi teks/tombol */
     pointer-events: none;         /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
     object-fit: contain;
 }
 
-/* MAKI KIRI (DONGKRAK UKURAN JUMBO & GESER MEPET KELUAR POJOK KIRI) */
+/* MAKI KIRI (UKURAN RAKSASA & MEPOET POJOK KIRI ATAS) */
 .left-anime {
-    left: -120px !important;      /* FIXED: Ditarik angka minus ke kiri luar biar gak nabrak kotak teks tengah */
-    top: -50px !important;        /* FIXED: Ditarik paksa ke atas biar kepalanya makin tinggi menjulang */
-    height: 105vh !important;     /* RAKSASA ENGINE: Tingginya melar melewati total tinggi layar monitor laptop lu */
+    left: -120px !important;      /* Tetap ditarik keluar biar gak nabrak kotak teks tengah */
+    top: -120px !important;       /* INI KUNCINYA: Tarik paksa ke atas biar kepalanya menjulang tinggi ngelewatin bar laptop lu */
+    height: 1100px !important;    /* SCALE ENGINE: Kita tembak langsung pake 1100px biar badannya tinggi gede raksasa! */
     width: auto !important;
 }
 
-/* MAKI KANAN (DONGKRAK UKURAN JUMBO & GESER MEPET KELUAR POJOK KANAN) */
+/* MAKI KANAN (UKURAN RAKSASA & MEPOET POJOK KANAN ATAS) */
 .right-anime {
-    right: -100px !important;     /* FIXED: Ditarik angka minus ke kanan luar biar simetris dan rapi */
-    top: -50px !important;        /* FIXED: Ditarik paksa ke atas juga biar seimbang */
-    height: 105vh !important;     /* RAKSASA ENGINE: Tingginya disamakan melewati batas layar biar makin bongsor sangar */
+    right: -100px !important;     /* Tetap ditarik keluar kanan biar simetris dan rapi */
+    top: -120px !important;       /* Tarik paksa ke atas juga biar sejajar sama yang kiri */
+    height: 1100px !important;    /* Disamakan 1100px raksasa permanen */
     width: auto !important;
 }
 
@@ -140,17 +139,17 @@ pre {
     color: #aaa; 
 }
 
-/* FIX MUTLAK TOMBOL COPY SCRIPT JUMBO SANGAR DI TENGAH */
+/* TOMBOL COPY SCRIPT JUMBO SANGAR DI TENGAH (UTUH & TETEP JUMBO) */
 .copy-btn {
     display: inline-block !important;
     width: auto !important;
-    min-width: 340px !important;       /* Kunci lebar minimal tombol biar jumbo nan tegap */
-    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol biar empuk pas ditekan */
+    min-width: 340px !important;       
+    padding: 16px 50px !important;     
     background: #ffffff !important;
     color: #000000 !important;
-    font-size: 15px !important;        /* Ukuran huruf diperbesar biar jelas terbaca */
-    font-weight: 900 !important;       /* Ketebalan font level maksimal (Ekstrim Bold) */
-    letter-spacing: 1px !important;    /* Renggangkan jarak teks huruf biar estetik */
+    font-size: 15px !important;        
+    font-weight: 900 !important;       
+    letter-spacing: 1px !important;    
     border: none !important;
     border-radius: 8px !important;
     cursor: pointer !important;
@@ -158,7 +157,6 @@ pre {
     box-shadow: 0 0 20px rgba(255,255,255,0.15) !important;
 }
 
-/* Efek Animasi Membesar Halus Pas Kursor Mouse Nempel */
 .copy-btn:hover {
     background: #e5e5e5 !important;
     transform: scale(1.04) !important;  
