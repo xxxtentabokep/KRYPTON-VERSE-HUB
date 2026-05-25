@@ -11,6 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; 
     min-height: 100vh;
+    position: relative; /* KUNCI UTAMA: Biar foto absolute di bawah nempel presisi di body halaman */
 }
 
 /* 2. BACKGROUND GRID */
@@ -26,26 +27,26 @@ body {
     z-index: -2;
 }
 
-/* DASAR FOTO MAKI - DONGKRAK SKALA MAKSIMAL */
+/* DASAR FOTO MAKI - SEKARANG DIKUNCI MATI DI BACKGROUND WEB */
 .fixed-anime {
-    position: fixed !important;   /* Kita balikin ke fixed biar dia berdiri tegak setinggi layar monitor laptop lu */
-    bottom: -30px !important;     /* Sedikit kita tenggelamkan kakinya biar pas nempel di dasar layar */
-    z-index: -1;                  /* Tetap di paling belakang biar gak ngalangin tulisan */
-    pointer-events: none;         /* Biar gak ganggu klik mouse */
+    position: absolute !important; /* FIXED BYPASS: Menempel mati di halaman web, bukan ngambang di monitor monitor lu */
+    bottom: 0 !important;          /* Kakinya wajib nempel pas di dasar bawah halaman web */
+    z-index: -1;                   /* Tetap di paling belakang biar gak ngalangin tulisan */
+    pointer-events: none;          /* Biar gak ganggu klik mouse */
     object-fit: contain;
 }
 
 /* MAKI KIRI (TANGAN DI BELAKANG) */
 .left-anime {
-    left: -10px !important;       /* Geser mepet ke pojok kiri layar laptop lu */
-    height: 850px !important;     /* UKURAN AMBISIRES: Tinggi 850px mutlak, dijamin langsung raksasa! */
+    left: 15px !important;         /* Jarak aman mepet ke pojok kiri */
+    height: 850px !important;      /* TETEP RAKSASA: Tinggi 850px mutlak tanpa kompromi! */
     width: auto !important;
 }
 
 /* MAKI KANAN (PEGANG GELAS) */
 .right-anime {
-    right: -10px !important;      /* Geser mepet ke pojok kanan layar laptop lu */
-    height: 850px !important;     /* Disamakan 850px biar seimbang dan simetris kanan-kiri */
+    right: 15px !important;        /* Jarak aman mepet ke pojok kanan */
+    height: 850px !important;      /* Disamakan 850px biar seimbang dan simetris kanan-kiri */
     width: auto !important;
 }
 
@@ -65,7 +66,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 250px; /* DONGKRAK JARAK BAWAH: Biar kaki si Maki nempel pas sejajar menu dan gak ambles ketutupan! */
     position: relative;
     z-index: 5;
 }
@@ -115,23 +116,12 @@ main {
     border: 1px solid #222;
 }
 
-.code-container {
-    background: #000;
-    padding: 15px;
-    border-radius: 6px;
-    margin: 20px 0;
-    border: 1px solid #333;
-    overflow-x: auto;
-}
-
-pre { font-size: 12px; color: #aaa; }
-
-/* FIX RADIKAL TOMBOL COPY SCRIPT JUMBO */
+/* FIX TOMBOL COPY SCRIPT JUMBO SANGAR */
 .copy-btn {
     display: inline-block !important;
     width: auto !important;
-    min-width: 320px !important;       /* Kunci lebar minimal tombol biar mantap nan tegap */
-    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol biar jumbo */
+    min-width: 340px !important;       /* Kunci lebar minimal tombol biar jumbo nan tegap */
+    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol */
     background: #ffffff !important;
     color: #000000 !important;
     font-size: 15px !important;        /* Ukuran huruf diperbesar biar jelas terbaca */
