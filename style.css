@@ -1,3 +1,8 @@
+/* ===================================================
+   KRYPTON VERSE OFFICIAL STYLESHEET (Project-KV-VII)
+   FIXED EDITION: JUMBO BUTTON & GIANT SIDE MAKI
+   =================================================== */
+
 /* 1. RESET DASAR */
 * {
     margin: 0;
@@ -9,9 +14,9 @@ body {
     background-color: #050505;
     color: white;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Biar nggak ada scroll samping */
     min-height: 100vh;
-    position: relative; /* KUNCI UTAMA: Biar foto absolute di bawah nempel presisi di body halaman */
+    position: relative;
 }
 
 /* 2. BACKGROUND GRID */
@@ -27,26 +32,28 @@ body {
     z-index: -2;
 }
 
-/* DASAR FOTO MAKI - SEKARANG DIKUNCI MATI DI BACKGROUND WEB */
+/* 3. DASAR FOTO MAKI - DIKUNCI MATI FIX DI MONITOR */
 .fixed-anime {
-    position: absolute !important; /* FIXED BYPASS: Menempel mati di halaman web, bukan ngambang di monitor monitor lu */
-    bottom: 0 !important;          /* Kakinya wajib nempel pas di dasar bawah halaman web */
-    z-index: -1;                   /* Tetap di paling belakang biar gak ngalangin tulisan */
-    pointer-events: none;          /* Biar gak ganggu klik mouse */
+    position: fixed !important;   /* Mengunci gambar tetap diam mengapit layar monitor laptop lu */
+    bottom: -10px !important;     /* Kaki sedikit kita turunin biar badannya makin naik tegak ke atas */
+    z-index: -1;                  /* Taruh di paling belakang agar tidak menutupi teks/tombol */
+    pointer-events: none;         /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
     object-fit: contain;
 }
 
-/* MAKI KIRI (TANGAN DI BELAKANG) */
+/* MAKI KIRI (DONGKRAK UKURAN JUMBO & GESER MEPET KELUAR POJOK KIRI) */
 .left-anime {
-    left: 15px !important;         /* Jarak aman mepet ke pojok kiri */
-    height: 850px !important;      /* TETEP RAKSASA: Tinggi 850px mutlak tanpa kompromi! */
+    left: -120px !important;      /* FIXED: Ditarik angka minus ke kiri luar biar gak nabrak kotak teks tengah */
+    top: -50px !important;        /* FIXED: Ditarik paksa ke atas biar kepalanya makin tinggi menjulang */
+    height: 105vh !important;     /* RAKSASA ENGINE: Tingginya melar melewati total tinggi layar monitor laptop lu */
     width: auto !important;
 }
 
-/* MAKI KANAN (PEGANG GELAS) */
+/* MAKI KANAN (DONGKRAK UKURAN JUMBO & GESER MEPET KELUAR POJOK KANAN) */
 .right-anime {
-    right: 15px !important;        /* Jarak aman mepet ke pojok kanan */
-    height: 850px !important;      /* Disamakan 850px biar seimbang dan simetris kanan-kiri */
+    right: -100px !important;     /* FIXED: Ditarik angka minus ke kanan luar biar simetris dan rapi */
+    top: -50px !important;        /* FIXED: Ditarik paksa ke atas juga biar seimbang */
+    height: 105vh !important;     /* RAKSASA ENGINE: Tingginya disamakan melewati batas layar biar makin bongsor sangar */
     width: auto !important;
 }
 
@@ -60,13 +67,16 @@ header {
     z-index: 10;
 }
 
-.main-brand { font-size: 32px; font-weight: 900; }
+.main-brand { 
+    font-size: 32px; 
+    font-weight: 900; 
+}
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 250px; /* DONGKRAK JARAK BAWAH: Biar kaki si Maki nempel pas sejajar menu dan gak ambles ketutupan! */
+    padding-bottom: 100px;
     position: relative;
     z-index: 5;
 }
@@ -116,17 +126,31 @@ main {
     border: 1px solid #222;
 }
 
-/* FIX TOMBOL COPY SCRIPT JUMBO SANGAR */
+.code-container {
+    background: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid #333;
+    overflow-x: auto;
+}
+
+pre { 
+    font-size: 12px; 
+    color: #aaa; 
+}
+
+/* FIX MUTLAK TOMBOL COPY SCRIPT JUMBO SANGAR DI TENGAH */
 .copy-btn {
     display: inline-block !important;
     width: auto !important;
     min-width: 340px !important;       /* Kunci lebar minimal tombol biar jumbo nan tegap */
-    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol */
+    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol biar empuk pas ditekan */
     background: #ffffff !important;
     color: #000000 !important;
     font-size: 15px !important;        /* Ukuran huruf diperbesar biar jelas terbaca */
     font-weight: 900 !important;       /* Ketebalan font level maksimal (Ekstrim Bold) */
-    letter-spacing: 1px !important;    /* Renggangkan jarak teks huruf */
+    letter-spacing: 1px !important;    /* Renggangkan jarak teks huruf biar estetik */
     border: none !important;
     border-radius: 8px !important;
     cursor: pointer !important;
@@ -134,9 +158,10 @@ main {
     box-shadow: 0 0 20px rgba(255,255,255,0.15) !important;
 }
 
+/* Efek Animasi Membesar Halus Pas Kursor Mouse Nempel */
 .copy-btn:hover {
     background: #e5e5e5 !important;
-    transform: scale(1.04) !important;  /* Efek membesar saat kursor nempel */
+    transform: scale(1.04) !important;  
     box-shadow: 0 0 25px rgba(255,255,255,0.3) !important;
 }
 
