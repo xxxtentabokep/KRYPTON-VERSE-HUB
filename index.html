@@ -8,9 +8,10 @@
     
     <link rel="icon" type="image/png" href="logo.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <!-- Trik paksa cache v4.0 biar gaya CSS Maki raksasa dan tombol jumbo langsung ke-load -->
+    <link rel="stylesheet" href="style.css?v=4.0">
 </head>
 <body>
 
@@ -24,7 +25,7 @@
             <p class="project-label">PROJECT: K.V</p>
             <h1 class="main-brand">KRYPTON VERSE</h1>
         </div>
-        <button class="discord-btn" onclick="window.location.href='https://discord.gg/yourlink'">JOIN DISCORD</button>
+        <button class="discord-btn" onclick="window.location.href='https://discord.gg'">JOIN DISCORD</button>
     </header>
 
     <main>
@@ -69,11 +70,11 @@
             </ul>
 
             <div class="code-container">
-                <pre id="scriptCode">loadstring(game:HttpGet("https://githubusercontent.com"))()</pre>
+                <!-- FIX MUTLAK: Link raw GitHub baru lu yang bener udah nangkring di sini, bre! -->
+                <pre id="scriptCode">loadstring(game:HttpGet("https://raw.githubusercontent.com/xxxtentabokep/Project-KV-VII/refs/heads/main/projectkv.lua"))()</pre>
             </div>
 
             <div style="text-align: center; margin-top: 25px;">
-                <!-- HANYA ADA SATU TOMBOL JUMBO BERSIH DAN PATUH CSS DISINI, CUY! -->
                 <button onclick="copyScript()" class="copy-btn">COPY KRYPTON VERSE SCRIPT</button>
             </div>
         </div>
