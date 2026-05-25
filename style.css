@@ -1,6 +1,6 @@
 /* ===================================================
    KRYPTON VERSE OFFICIAL STYLESHEET (Project-KV-VII)
-   FINAL ABSOLUTE ENGINE: GIANT STATIC MAKI & JUMBO BTN
+   FINAL ABSOLUTE ENGINE: PERFECT DYNAMIC GIANT MAKI
    =================================================== */
 
 /* 1. RESET DASAR */
@@ -40,18 +40,18 @@ body {
     object-fit: contain;
 }
 
-/* MAKI KIRI (UKURAN RAKSASA & MEPOET POJOK KIRI ATAS) */
+/* MAKI KIRI (UKURAN RAKSASA & TURUN PAS KE BAWAH) */
 .left-anime {
     left: -120px !important;      /* Tetap ditarik keluar biar gak nabrak kotak teks tengah */
-    top: -120px !important;       /* INI KUNCINYA: Tarik paksa ke atas biar kepalanya menjulang tinggi ngelewatin bar laptop lu */
-    height: 1100px !important;    /* SCALE ENGINE: Kita tembak langsung pake 1100px biar badannya tinggi gede raksasa! */
+    top: -40px !important;        /* RE-FIXED: Kita kecilin minusnya dari -120px jadi -40px biar dia merosot turun ke bawah secara presisi! */
+    height: 1100px !important;    /* SCALE ENGINE: Tetap raksasa 1100px biar super sangar */
     width: auto !important;
 }
 
-/* MAKI KANAN (UKURAN RAKSASA & MEPOET POJOK KANAN ATAS) */
+/* MAKI KANAN (UKURAN RAKSASA & TURUN PAS KE BAWAH) */
 .right-anime {
     right: -100px !important;     /* Tetap ditarik keluar kanan biar simetris dan rapi */
-    top: -120px !important;       /* Tarik paksa ke atas juga biar sejajar sama yang kiri */
+    top: -40px !important;        /* RE-FIXED: Disamakan -40px biar tingginya pas dan sejajar di layar laptop lu */
     height: 1100px !important;    /* Disamakan 1100px raksasa permanen */
     width: auto !important;
 }
