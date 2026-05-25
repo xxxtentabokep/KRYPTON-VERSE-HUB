@@ -11,6 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; /* Biar nggak ada scroll samping */
     min-height: 100vh;
+    position: relative; /* KUNCI UTAMA: Biar foto absolute di bawah bisa nempel presisi */
 }
 
 /* 2. BACKGROUND GRID */
@@ -26,32 +27,27 @@ body {
     z-index: -2;
 }
 
-/* DASAR FOTO */
+/* DASAR FOTO - SEKARANG NEMPEL STATIS DI BACKGROUND HALAMAN */
 .fixed-anime {
-    position: fixed !important; /* Mengunci gambar tetap diam di layar monitor saat di-scroll */
-    bottom: 0 !important;       /* Menempelkan kaki tepat di dasar bawah layar */
-    z-index: -1;                /* Taruh di paling belakang agar tidak menutupi teks/tombol */
-    pointer-events: none;       /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
+    position: absolute !important; /* FIXED BYPASS: Menempel permanen di halaman web, bukan mengambang di monitor */
+    bottom: 0 !important;          /* Kakinya wajib nempel pas di dasar bawah halaman web */
+    z-index: -1;                   /* Taruh di paling belakang agar tidak menutupi teks/tombol */
+    pointer-events: none;          /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
     object-fit: contain;
 }
 
 /* MAKI KIRI */
 .left-anime {
-    left: 0px !important;       /* Geser mepet ke kiri layar */
-    height: 85vh !important;    /* Tingginya otomatis 85% dari total tinggi layar monitor user */
+    left: 10px !important;         /* Jarak aman mepet kiri layar */
+    height: 750px !important;      /* Ukuran tinggi bongsor permanen yang pas di laptop lu */
 }
 
 /* MAKI KANAN */
 .right-anime {
-    right: 0px !important;      /* Geser mepet ke kanan layar */
-    height: 85vh !important;    /* Tingginya disamakan 85% biar seimbang dan presisi */
+    right: 10px !important;        /* Jarak aman mepet kanan layar */
+    height: 750px !important;      /* Ukuran tinggi disamakan biar seimbang dan presisi */
 }
 
-/* Supaya kaki bener-bener nempel di bawah area slogan/menu */
-body {
-    position: relative;
-    min-height: 100vh;
-}
 /* 4. KONTEN TENGAH */
 header {
     display: flex;
@@ -120,8 +116,8 @@ main {
 
 .code-container {
     background: #000;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 6px;
     margin: 20px 0;
     border: 1px solid #333;
     overflow-x: auto;
@@ -129,15 +125,29 @@ main {
 
 pre { font-size: 12px; color: #aaa; }
 
+/* FIX TOMBOL COPY SCRIPT - JADI GEDE, TEBAL, ELEGAN DI TENGAH */
 .copy-btn {
-    width: 100%;
-    padding: 15px;
+    display: block !important;
+    width: auto !important;             /* Ciutkan tombol dari yang tadinya melar full layar */
+    margin: 20px auto 0 auto !important; /* Letakkan tombol otomatis pas ditengah-tengah kotak info */
+    padding: 14px 45px !important;      /* Kasih bantalan klik yang luas biar mantap pas ditekan */
     background: white;
     color: black;
-    font-weight: 900;
+    font-size: 14px !important;         /* Ukuran font teks diperjelas */
+    font-weight: 900 !important;        /* Ketebalan font di-push ke level maksimal */
+    letter-spacing: 1px;                /* Kasih jarak renggang estetik antar huruf teks */
     border: none;
-    border-radius: 10px;
+    border-radius: 8px !important;
     cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* Efek Hover Animasi pas Kursor Mouse Nempel di Tombol */
+.copy-btn:hover {
+    background: #e5e5e5;
+    transform: scale(1.03);             /* Tombol membesar dikit secara halus saat didekati */
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 .discord-btn {
