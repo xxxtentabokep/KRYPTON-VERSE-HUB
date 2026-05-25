@@ -9,9 +9,8 @@ body {
     background-color: #050505;
     color: white;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Biar nggak ada scroll samping */
+    overflow-x: hidden; 
     min-height: 100vh;
-    position: relative; /* KUNCI UTAMA: Biar foto absolute di bawah bisa nempel presisi */
 }
 
 /* 2. BACKGROUND GRID */
@@ -27,25 +26,27 @@ body {
     z-index: -2;
 }
 
-/* DASAR FOTO - SEKARANG NEMPEL STATIS DI BACKGROUND HALAMAN */
+/* DASAR FOTO MAKI - DONGKRAK SKALA MAKSIMAL */
 .fixed-anime {
-    position: absolute !important; /* FIXED BYPASS: Menempel permanen di halaman web, bukan mengambang di monitor */
-    bottom: 0 !important;          /* Kakinya wajib nempel pas di dasar bawah halaman web */
-    z-index: -1;                   /* Taruh di paling belakang agar tidak menutupi teks/tombol */
-    pointer-events: none;          /* Supaya gambar tidak bisa diklik atau mengganggu mouse */
+    position: fixed !important;   /* Kita balikin ke fixed biar dia berdiri tegak setinggi layar monitor laptop lu */
+    bottom: -30px !important;     /* Sedikit kita tenggelamkan kakinya biar pas nempel di dasar layar */
+    z-index: -1;                  /* Tetap di paling belakang biar gak ngalangin tulisan */
+    pointer-events: none;         /* Biar gak ganggu klik mouse */
     object-fit: contain;
 }
 
-/* MAKI KIRI */
+/* MAKI KIRI (TANGAN DI BELAKANG) */
 .left-anime {
-    left: 10px !important;         /* Jarak aman mepet kiri layar */
-    height: 750px !important;      /* Ukuran tinggi bongsor permanen yang pas di laptop lu */
+    left: -10px !important;       /* Geser mepet ke pojok kiri layar laptop lu */
+    height: 850px !important;     /* UKURAN AMBISIRES: Tinggi 850px mutlak, dijamin langsung raksasa! */
+    width: auto !important;
 }
 
-/* MAKI KANAN */
+/* MAKI KANAN (PEGANG GELAS) */
 .right-anime {
-    right: 10px !important;        /* Jarak aman mepet kanan layar */
-    height: 750px !important;      /* Ukuran tinggi disamakan biar seimbang dan presisi */
+    right: -10px !important;      /* Geser mepet ke pojok kanan layar laptop lu */
+    height: 850px !important;     /* Disamakan 850px biar seimbang dan simetris kanan-kiri */
+    width: auto !important;
 }
 
 /* 4. KONTEN TENGAH */
@@ -125,29 +126,28 @@ main {
 
 pre { font-size: 12px; color: #aaa; }
 
-/* FIX TOMBOL COPY SCRIPT - JADI GEDE, TEBAL, ELEGAN DI TENGAH */
+/* FIX RADIKAL TOMBOL COPY SCRIPT JUMBO */
 .copy-btn {
-    display: block !important;
-    width: auto !important;             /* Ciutkan tombol dari yang tadinya melar full layar */
-    margin: 20px auto 0 auto !important; /* Letakkan tombol otomatis pas ditengah-tengah kotak info */
-    padding: 14px 45px !important;      /* Kasih bantalan klik yang luas biar mantap pas ditekan */
-    background: white;
-    color: black;
-    font-size: 14px !important;         /* Ukuran font teks diperjelas */
-    font-weight: 900 !important;        /* Ketebalan font di-push ke level maksimal */
-    letter-spacing: 1px;                /* Kasih jarak renggang estetik antar huruf teks */
-    border: none;
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 320px !important;       /* Kunci lebar minimal tombol biar mantap nan tegap */
+    padding: 16px 50px !important;     /* Tebalkan bantalan klik tombol biar jumbo */
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 15px !important;        /* Ukuran huruf diperbesar biar jelas terbaca */
+    font-weight: 900 !important;       /* Ketebalan font level maksimal (Ekstrim Bold) */
+    letter-spacing: 1px !important;    /* Renggangkan jarak teks huruf */
+    border: none !important;
     border-radius: 8px !important;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    cursor: pointer !important;
+    transition: 0.3s ease !important;
+    box-shadow: 0 0 20px rgba(255,255,255,0.15) !important;
 }
 
-/* Efek Hover Animasi pas Kursor Mouse Nempel di Tombol */
 .copy-btn:hover {
-    background: #e5e5e5;
-    transform: scale(1.03);             /* Tombol membesar dikit secara halus saat didekati */
-    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    background: #e5e5e5 !important;
+    transform: scale(1.04) !important;  /* Efek membesar saat kursor nempel */
+    box-shadow: 0 0 25px rgba(255,255,255,0.3) !important;
 }
 
 .discord-btn {
