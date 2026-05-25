@@ -55,32 +55,28 @@
                 Ini adalah script khusus untuk FPS game (First Person Shooter) meliputi:
             </p>
             
-<h3>MAIN FEATURES</h3>
-<ul>
-    <li><b>Cursor Aimbot:</b> Locks onto the closest enemy to your crosshair/cursor (Headshot only).</li>
-    <li><b>Team Filter & Solver:</b> 100% safe with accurate color coding (RED for enemies, GREEN for teammates).</li>
-    <li><b>Drawing Box & Snapline ESP:</b> Smooth, lag-free visual box and tracers that auto-scale with distance.</li>
-    <li><b>🔴 Body Highlight:</b> Toggles a red glow silhouette on enemies only, visible through walls.</li>
-    <li><b>Vertical Fly & Utility:</b> Fly anywhere (Space to go up, Shift to go down) with speed customization up to 1000.</li>
-    <li><b>Absolute Super Speed:</b> High-velocity run speed bypass up to 1000, immune to server resets.</li>
-    <li><b>No Clip Mode:</b> Disables player character collisions, allowing you to walk right through objects and walls.</li>
-    <li><b>Game Boosters:</b> Extreme FPS Booster (ultra-low graphics) and Supreme Ping Reducer for delay-free execution.</li>
-    <li><b>Built-in Protection:</b> Built-in Anti-Report and Anti-Ban security layers to keep your execution safe.</li>
-</ul>
+            <h3>MAIN FEATURES</h3>
+            <ul style="list-style: none; font-size: 13px; color: #aaa; padding-left: 15px; line-height: 2;">
+                <li>• <b>Cursor Aimbot:</b> Locks onto the closest enemy to your crosshair/cursor (Headshot only).</li>
+                <li>• <b>Team Filter & Solver:</b> 100% safe with accurate color coding (RED for enemies, GREEN for teammates).</li>
+                <li>• <b>Drawing Box & Snapline ESP:</b> Smooth, lag-free visual box and tracers that auto-scale with distance.</li>
+                <li>• <b>🔴 Body Highlight:</b> Toggles a red glow silhouette on enemies only, visible through walls.</li>
+                <li>• <b>Vertical Fly & Utility:</b> Fly anywhere (Space to go up, Shift to go down) with speed customization up to 1000.</li>
+                <li>• <b>Absolute Super Speed:</b> High-velocity run speed bypass up to 1000, immune to server resets.</li>
+                <li>• <b>No Clip Mode:</b> Disables player character collisions, allowing you to walk right through objects and walls.</li>
+                <li>• <b>Game Boosters:</b> Extreme FPS Booster (ultra-low graphics) and Supreme Ping Reducer for delay-free execution.</li>
+                <li>• <b>Built-in Protection:</b> Built-in Anti-Report and Anti-Ban security layers to keep your execution safe.</li>
+            </ul>
+
+            <div class="code-container">
+                <pre id="scriptCode">loadstring(game:HttpGet("https://githubusercontent.com"))()</pre>
             </div>
 
-<div class="code-container">
-    <pre id="scriptCode">loadstring(game:HttpGet("https://githubusercontent.com"))()</pre>
-</div>
-
-<div style="text-align: center; margin-top: 25px;">
-    <!-- Pastikan class nya 'copy-btn' polosan tanpa ada atribut style manual yang nempel, cuy! -->
-    <button onclick="copyScript()" class="copy-btn">COPY KRYPTON VERSE SCRIPT</button>
-</div>
-
-<div style="text-align: center; margin-top: 15px; margin-bottom: 25px;">
-    <button onclick="copyScript()" style="background: #fff; color: #000; border: none; padding: 10px 24px; font-size: 12px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.2s; display: inline-block;">COPY KRYPTON VERSE SCRIPT</button>
-</div>
+            <div style="text-align: center; margin-top: 25px;">
+                <!-- HANYA ADA SATU TOMBOL JUMBO BERSIH DAN PATUH CSS DISINI, CUY! -->
+                <button onclick="copyScript()" class="copy-btn">COPY KRYPTON VERSE SCRIPT</button>
+            </div>
+        </div>
 
     </main>
 
@@ -88,7 +84,6 @@
         function copyScript() {
             const scriptText = document.getElementById('scriptCode').innerText;
             navigator.clipboard.writeText(scriptText).then(() => {
-                // Notifikasi dari Olivia
                 alert('Script berhasil disalin ke clipboard ya sayanggg! ❤️🦖');
             }).catch(err => {
                 console.error('Gagal menyalin script: ', err);
